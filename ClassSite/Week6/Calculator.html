@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Week 6 | JavaScript Pay Calculator</title>
+    
+  </head>
+
+
+  <body>
+
+    <script>
+
+      
+      // variables
+
+      var hourlyPay = 14.50;
+      var hoursPerWeek = 32;
+      var numberOfWeeks = 2;
+      var taxRate = 0.20;
+
+      // Number casting
+
+      var userHourlyPay = Number(prompt("Enter your hourly pay:", hourlyPay));
+
+      var userHours = Number(prompt("Enter hours worked per week:", hoursPerWeek));
+
+      // Calculations
+
+      var grossPay = userHourlyPay * userHours * numberOfWeeks;
+      var taxes = grossPay * taxRate;
+      var netPay = grossPay - taxes;
+
+      // Displaying Results
+
+      var message = `
+        Gross Pay: $${grossPay.toFixed(2)}
+        Uncle Sam's Share: $${taxes.toFixed(2)}
+        Net Pay: $${netPay.toFixed(2)}`;
+
+      alert(message);
+      console.log(`Gross Pay: $${grossPay.toFixed(2)}`);
+      console.log(`Uncle Sam's Share: $${taxes.toFixed(2)}`);
+      console.log(`Net Pay: $${netPay.toFixed(2)}`);
+
+
+    </script>
+
+  </body>
+
+
+</html>
